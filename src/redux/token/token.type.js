@@ -1,3 +1,3 @@
 export const tokenActionType = {
-    SET_TOKEN: 'SET_TOKEN'
+    GET_TOKEN: 'GET_TOKEN'
 }

@@ -1,12 +1,12 @@
 import { tokenActionType } from './token.type'
 
 const INITIAL_STATE = {
-    token: "",
+    token: ""
 }
 
 export const tokenReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
-        case tokenActionType.SET_TOKEN:
+        case tokenActionType.GET_TOKEN:
             return {
                 ...state,
                 token: action.payload

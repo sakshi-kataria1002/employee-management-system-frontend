@@ -1,26 +1,14 @@
 import { Button, Table, TableContainer, TableCell, TableHead, TableRow, TableBody, Paper } from "@mui/material"
 import axios from 'axios'
 import { useNavigate } from "react-router-dom"
-import { connect } from "react-redux"
+//import {connect} from "react-redux"
 
-const AllDetails = ({ getToken, users: { _id, displayName, email, address, contact } }) => {
+const AllDetails = ({ users: { _id, displayName, email, address, contact } }) => {
   const navigate = useNavigate()
 
-  // const handleOnDelete = () => {
-  //   axios.delete(`https://employee-management-system-backend-ten.vercel.app/app/users/deleteEmployee/${_id}`)
-  //     .then((response) => console.log(response))
-  // }
-
-  const handleOnDelete = async () => {
-    const url = (`https://employee-management-system-backend-ten.vercel.app/app/users/deleteEmployee/${_id}`)
-    const config = {
-      headers: {
-        "auth-token": getToken
-      }
-    }
-    await axios.delete(url, config)
-      .then(res => alert("Deleted successfully"))
-      .catch(err => console.log(err))
+  const handleOnDelete = () => {
+    axios.delete(`https://employee-management-system-backend-ten.vercel.app/app/users/deleteEmployee/${_id}`)
+      .then((response) => console.log(response))
   }
 
   return (
@@ -57,8 +45,4 @@ const AllDetails = ({ getToken, users: { _id, displayName, email, address, conta
   )
 }
 
-const mapStateToProps = (state) => ({
-  getToken: state.token.token
-})
-
-export default connect(mapStateToProps, null)(AllDetails)
+export default AllDetails

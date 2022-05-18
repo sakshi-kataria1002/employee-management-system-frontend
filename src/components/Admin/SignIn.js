@@ -4,7 +4,7 @@ import axios from 'axios'
 import EmailIcon from '@mui/icons-material/Email';
 import LockIcon from '@mui/icons-material/Lock';
 import { connect } from "react-redux"
-import { setToken } from "../../redux/token/token.action"
+import { getToken } from "../../redux/token/token.action"
 import { useNavigate } from "react-router-dom"
 
 const SignIn = ({ sendToken }) => {
@@ -73,7 +73,7 @@ const SignIn = ({ sendToken }) => {
 }
 
 const mapDispatchToProps = dispatch => ({
-    sendToken: token => dispatch(setToken(token))
+    sendToken: token => dispatch(getToken(token))
 })
 
 export default connect(null, mapDispatchToProps)(SignIn)
