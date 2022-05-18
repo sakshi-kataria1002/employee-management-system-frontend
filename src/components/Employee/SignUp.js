@@ -25,7 +25,7 @@ const SignUp = () => {
 
     return (
         <>
-            <Grid container spacing={2}>
+            <Grid container spacing={1}>
                 <Grid item lg={12} mx={20}>
                     <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                         <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
@@ -36,9 +36,9 @@ const SignUp = () => {
                             variant="standard"
                             onChange={handleChange} />
                     </Box>
-                    {/* <label>It should contain more than 3 characters</label> */}
+                    <label>contain atleast 3 characters</label>
                 </Grid>
-                <Grid item lg={12} mx={20}>
+                <Grid item lg={12} mx={18}>
                     <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                         <EmailIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
                         <TextField
@@ -49,9 +49,9 @@ const SignUp = () => {
                             variant="standard"
                             onChange={handleChange} />
                     </Box>
-                    {/* <label>It should be a valid email</label> */}
+                    <label>should be a valid email</label>
                 </Grid>
-                <Grid item lg={12} mx={20}>
+                <Grid item lg={12} mx={18}>
                     <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                         <HomeIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
                         <TextField
@@ -61,9 +61,9 @@ const SignUp = () => {
                             variant="standard"
                             onChange={handleChange} />
                     </Box>
-                    {/* <label>It should contain more than 5 characters</label> */}
+                    <label>contain more than 5 characters</label>
                 </Grid>
-                <Grid item lg={12} mx={20}>
+                <Grid item lg={12} mx={18}>
                     <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                         <CallIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
                         <TextField
@@ -73,9 +73,9 @@ const SignUp = () => {
                             variant="standard"
                             onChange={handleChange} />
                     </Box>
-                    {/* <label>It should contain 10 numbers</label> */}
+                    <label>contain 10 numbers</label>
                 </Grid>
-                <Grid item lg={12} mx={20}>
+                <Grid item lg={12} mx={18}>
                     <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                         <LockIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
                         <TextField
@@ -86,9 +86,9 @@ const SignUp = () => {
                             variant="standard"
                             onChange={handleChange} />
                     </Box>
-                    {/* <label>It should be 8 numbers maximum</label> */}
+                    <label>length should be 8 atleast</label>
                 </Grid>
-                <Grid item lg={12} mx={20}>
+                <Grid item lg={12} mx={18}>
                     <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                         <LockIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
                         <TextField
@@ -99,9 +99,9 @@ const SignUp = () => {
                             variant="standard"
                             onChange={handleChange} />
                     </Box>
-                    {/* <label>It should be 8 numbers maximum</label> */}
+                    <label>length should be 8 atleast</label>
                 </Grid>
-                <Grid item lg={12} mx={29}>
+                <Grid item lg={12} mx={18}>
                     <Button
                         onClick={handleSubmit}
                         variant="contained"

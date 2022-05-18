@@ -25,19 +25,20 @@ const SignUp = () => {
 
     return (
         <>
-            <Grid container spacing={2}>
-                <Grid item lg={12} mx={20}>
+            <Grid container spacing={1}>
+                <Grid item lg={12} mx={18}>
                     <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                         <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
                         <TextField
                             required
                             name="displayName"
                             label="Enter Your Name"
-                            variant="standard"
+                            variant="outlined"
                             onChange={handleChange} />
                     </Box>
+                    <label>contain atleast 3 characters</label>
                 </Grid>
-                <Grid item lg={12} mx={20}>
+                <Grid item lg={12} mx={18}>
                     <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                         <EmailIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
                         <TextField
@@ -45,33 +46,37 @@ const SignUp = () => {
                             name="email"
                             type="email"
                             label="Enter Your Email"
-                            variant="standard"
+                            variant="outlined"
                             onChange={handleChange} />
                     </Box>
+                    <label>should be a valid email</label>
                 </Grid>
-                <Grid item lg={12} mx={20}>
+                <Grid item lg={12} mx={18}>
                     <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                         <HomeIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
                         <TextField
                             required
                             name="address"
                             label="Address"
-                            variant="standard"
+                            variant="outlined"
                             onChange={handleChange} />
                     </Box>
+                    <label>contain more than 5 characters</label>
                 </Grid>
-                <Grid item lg={12} mx={20}>
+                <Grid item lg={12} mx={18}>
                     <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                         <CallIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
                         <TextField
                             required
                             name="contact"
                             label="Contact Number"
-                            variant="standard"
+                            variant="outlined"
                             onChange={handleChange} />
                     </Box>
+                    <label>contain 10 numbers</label>
+
                 </Grid>
-                <Grid item lg={12} mx={20}>
+                <Grid item lg={12} mx={18}>
                     <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                         <LockIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
                         <TextField
@@ -79,11 +84,12 @@ const SignUp = () => {
                             name="password"
                             type="password"
                             label="Password"
-                            variant="standard"
+                            variant="outlined"
                             onChange={handleChange} />
                     </Box>
+                    <label>length should be 8 atleast</label>
                 </Grid>
-                <Grid item lg={12} mx={20}>
+                <Grid item lg={12} mx={18}>
                     <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                         <LockIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
                         <TextField
@@ -91,9 +97,10 @@ const SignUp = () => {
                             name="confirmPassword"
                             type="password"
                             label="Confirm Password"
-                            variant="standard"
+                            variant="outlined"
                             onChange={handleChange} />
                     </Box>
+                    <label>length should be 8 atleast</label>
                 </Grid>
                 <Grid item lg={12} mx={29}>
                     <Button

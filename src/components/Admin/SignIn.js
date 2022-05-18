@@ -35,7 +35,7 @@ const SignIn = ({ sendToken }) => {
     return (
         <>
             <Grid container spacing={2}>
-                <Grid item lg={12} mx={20}>
+                <Grid item lg={12} mx={18}>
                     <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                         <EmailIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
                         <TextField
@@ -43,11 +43,11 @@ const SignIn = ({ sendToken }) => {
                             name="email"
                             type="email"
                             label="Email"
-                            variant="filled"
+                            variant="standard"
                             onChange={handleChange} />
                     </Box>
                 </Grid>
-                <Grid item lg={12} mx={20}>
+                <Grid item lg={12} mx={18}>
                     <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                         <LockIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
                         <TextField
@@ -55,7 +55,7 @@ const SignIn = ({ sendToken }) => {
                             name="password"
                             type="password"
                             label="Password"
-                            variant="filled"
+                            variant="standard"
                             onChange={handleChange} />
                     </Box>
                 </Grid>

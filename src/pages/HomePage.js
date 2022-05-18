@@ -9,7 +9,7 @@ function HomePage() {
     return (
         <>
             <Container fixed>
-                <Box sx={{ bgcolor: '#e6f2ff', height: '60vh' }} >
+                <Box sx={{ bgcolor: '#D8D8D8', height: '80vh' }} >
                     <h1 style={{ textAlign: 'center' }}>EMPLOYEE MANAGEMENT SYSTEM</h1>
                     <Grid container>
                         <Grid lg={6}>
