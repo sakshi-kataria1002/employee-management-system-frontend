@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Employee from './pages/EmployeeDashboard'
+import Admin from './pages/AdminDashboard'
+import HomePage from './pages/HomePage'
+import DisplayEmployee from './components/Employee/DisplayEmployee'
+import DisplayAll from './components/Admin/DisplayAll'
+import UpdateDetails from './components/Admin/UpdateDetails'
+import AddEmployee from './components/Admin/AddEmployee'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/employee' element={<Employee />} />
+        <Route path='/admin' element={<Admin />} />
+        <Route path='/employee/display' element={<DisplayEmployee />} />
+        <Route path='/admin/display' element={<DisplayAll />} />
+        <Route path='/admin/display/update/:id' element={<UpdateDetails />} />
+        <Route path='/admin/display/addNewEmployee' element={<AddEmployee />} />
+      </Routes>
+    </>
+  )
 }
 
-export default App;
+export default App
