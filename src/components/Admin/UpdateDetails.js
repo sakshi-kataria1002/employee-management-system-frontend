@@ -20,11 +20,11 @@ const UpdateDetails = () => {
 
     const params = useParams()
     const navigate = useNavigate()
-    const [todo, setTodo] = useState({})
+    const [input, setInput] = useState({})
 
     const handleChange = (event) => {
         const { name, value } = event.target
-        setTodo({ ...todo, [name]: value })
+        setInput({ ...input, [name]: value })
     }
 
     const [open, setOpen] = React.useState(false);
@@ -32,7 +32,7 @@ const UpdateDetails = () => {
     const handleClose = () => setOpen(false);
 
     const handleUpdate = async () => {
-        await axios.put(`http://localhost:8080/app/users/editEmployee/${params.id}`, todo)
+        await axios.put(`https://employee-management-system-backend-ten.vercel.app/app/users/editEmployee/${params.id}`, input)
             //.then(response => console.log(response.data))
             .then(() => {
                 handleOpen();

@@ -14,7 +14,7 @@ const AddEmployee = () => {
     }
 
     const handleOnClick = async () => {
-        await axios.post("http://localhost:8080/app/users/adminEmployeeSignup", input)
+        await axios.post("https://employee-management-system-backend-ten.vercel.app/app/users/adminEmployeeSignup", input)
             .then((res) => {
                 console.log(res.data)
             })

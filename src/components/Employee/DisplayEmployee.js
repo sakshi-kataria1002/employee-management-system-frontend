@@ -1,19 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
-//import axios from 'axios'
 import { Grid, List, Button } from '@mui/material'
 import { useNavigate } from "react-router-dom";
 
 const DisplayEmployee = ({ getEmployee: { displayName, email, address, contact } }) => {
+
   const navigate = useNavigate()
-
-  // useEffect(() => {
-  //   axios.get("http://localhost:8080/app/users/getAllUsers")
-  //     .then(response => console.log(response.data))
-  //     .catch(error => console.error(error))
-  // })
-  //console.log(getEmployee)
-
 
   return (
     <>

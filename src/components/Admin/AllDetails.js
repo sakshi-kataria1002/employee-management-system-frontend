@@ -7,7 +7,7 @@ const AllDetails = ({ users: { _id, displayName, email, address, contact } }) =>
   const navigate = useNavigate()
 
   const handleOnDelete = () => {
-    axios.delete(`http://localhost:8080/app/users/deleteEmployee/${_id}`)
+    axios.delete(`https://employee-management-system-backend-ten.vercel.app/app/users/deleteEmployee/${_id}`)
       .then((response) => console.log(response))
   }
 
