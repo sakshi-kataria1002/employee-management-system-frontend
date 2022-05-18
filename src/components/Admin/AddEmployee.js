@@ -2,8 +2,9 @@ import { Grid, TextField, Button, Box, Container } from "@mui/material";
 import { useState } from "react"
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
+import { connect } from "react-redux"
 
-const AddEmployee = () => {
+const AddEmployee = ({ getToken }) => {
     const navigate = useNavigate()
     const [input, setInput] = useState({ displayName: '', email: '', address: '', contact: '' })
 
@@ -13,8 +14,26 @@ const AddEmployee = () => {
         console.log(input)
     }
 
-    const handleOnClick = async () => {
-        await axios.post("https://employee-management-system-backend-ten.vercel.app/app/users/adminEmployeeSignup", input)
+    // const handleOnClick = async () => {
+    //     await axios.post("https://employee-management-system-backend-ten.vercel.app/app/users/adminEmployeeSignup", input)
+    //         .then((res) => {
+    //             console.log(res.data)
+    //         })
+    //         .then(() => {
+    //             navigate("/admin/display")
+    //         })
+    //         .catch(error => console.log(error))
+    //     alert("Employee Added Successfully")
+    // }
+
+    const handleOnClick = (async () => {
+        const url = ("https://employee-management-system-backend-ten.vercel.app/app/users/adminEmployeeSignup")
+        const config = {
+            headers: {
+                "auth-token": getToken
+            }
+        }
+        await axios.post(url, input, config)
             .then((res) => {
                 console.log(res.data)
             })
@@ -23,8 +42,8 @@ const AddEmployee = () => {
             })
             .catch(error => console.log(error))
         alert("Employee Added Successfully")
-    }
-
+    })
+    
     return (
         <>
             <Container fixed>
@@ -97,4 +116,8 @@ const AddEmployee = () => {
     )
 }
 
-export default AddEmployee
+const mapStateToProps = (state) => ({
+    getToken: state.token.token
+})
+
+export default connect(mapStateToProps, null)(AddEmployee)

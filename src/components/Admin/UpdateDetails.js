@@ -3,6 +3,7 @@ import { Button, TextField, Container, Box, Modal, Typography } from '@mui/mater
 import { useParams, useNavigate } from 'react-router-dom';
 import SaveIcon from '@mui/icons-material/Save';
 import axios from 'axios'
+import { connect } from "react-redux"
 
 const style = {
     position: 'absolute',
@@ -16,7 +17,7 @@ const style = {
     p: 4,
 };
 
-const UpdateDetails = () => {
+const UpdateDetails = ({ getToken }) => {
 
     const params = useParams()
     const navigate = useNavigate()
@@ -31,9 +32,25 @@ const UpdateDetails = () => {
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
-    const handleUpdate = async () => {
-        await axios.put(`https://employee-management-system-backend-ten.vercel.app/app/users/editEmployee/${params.id}`, input)
-            //.then(response => console.log(response.data))
+    // const handleUpdate = async () => {
+    //     await axios.put(`https://employee-management-system-backend-ten.vercel.app/app/users/editEmployee/${params.id}`, input)
+    //         //.then(response => console.log(response.data))
+    //         .then(() => {
+    //             handleOpen();
+    //             setTimeout(() => {
+    //                 navigate('/admin/display');
+    //             }, 1000);
+    //         })
+    // }
+
+    const handleUpdate = () => {
+        const url = (`https://employee-management-system-backend-ten.vercel.app/app/users/editEmployee/${params.id}`)
+        const config = {
+            headers: {
+                "auth-token": getToken
+            }
+        }
+        axios.put(url, input, config)
             .then(() => {
                 handleOpen();
                 setTimeout(() => {
@@ -106,4 +123,8 @@ const UpdateDetails = () => {
     )
 }
 
-export default UpdateDetails
+const mapStateToProps = (state) => ({
+    getToken: state.token.token
+})
+
+export default connect(mapStateToProps, null)(UpdateDetails)
