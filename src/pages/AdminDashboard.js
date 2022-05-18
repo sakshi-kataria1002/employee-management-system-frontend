@@ -8,7 +8,7 @@ function Admin() {
   return (
     <>
       <Container fixed>
-        <Box sx={{ bgcolor: '#f0f0f5', height: '100vh' }} >
+        <Box sx={{ bgcolor: '#f9e6ff', height: '100vh' }} >
           <h1 style={{ textAlign: 'center' }}>Welcome To Admin Dashboard</h1>
           <Grid container>
             <Grid lg={6}>
