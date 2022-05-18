@@ -28,7 +28,7 @@ const SignIn = ({ sendToken }) => {
                     response.send("Please recheck your credentials")
                 }
             })
-        alert("Signed In Successfully!!")
+        alert("Admin Signed In Successfully")
         navigate('/admin/display')
     }
 

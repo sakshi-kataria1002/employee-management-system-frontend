@@ -28,7 +28,7 @@ const SignIn = ({ sendEmployee }) => {
                     response.send("Please recheck your credentials")
                 }
             })
-        alert("Signed In Successfully!!")
+        alert("Employee Signed In Successfully")
     }
 
     return (
