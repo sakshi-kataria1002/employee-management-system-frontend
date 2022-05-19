@@ -8,7 +8,7 @@ function Employee() {
   return (
     <>
       <Container fixed>
-        <Box sx={{ bgcolor: '#e6ffe6', height: '100vh' }} >
+        <Box sx={{ bgcolor: '#e6ffe6', height: '90vh' }} >
           <h1 style={{ textAlign: 'center' }}>Welcome To Employee Dashboard</h1>
           <Grid container>
             <Grid lg={6}>
