@@ -17,7 +17,7 @@ const SignUp = () => {
     }
 
     const handleSubmit = () => {
-        axios.post("https://employee-management-system-backend-ten.vercel.app/app/users/adminSignup", input)
+        axios.post("http://localhost:8080/app/users/adminSignup", input)
             .then(response => console.log(response.data))
             .catch(error => console.log(error))
         alert("User Created Successfully")

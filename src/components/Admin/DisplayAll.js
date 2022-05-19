@@ -11,7 +11,7 @@ const DisplayAll = ({ getEmployee, getToken, sendEmployee }) => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    const url = ("https://employee-management-system-backend-ten.vercel.app/app/users/getAllUsers")
+    const url = ("http://localhost:8080/app/users/getAllUsers")
     const config = {
       headers: {
         "auth-token": getToken
