@@ -19,7 +19,7 @@ const SignIn = ({ sendToken }) => {
 
     const handleSubmit = async () => {
         await axios
-            .post("https://employee-management-system-backend-omega.vercel.app/adminSignin", input)
+            .post("https://employee-management-system-backend-omega.vercel.app/app/users/adminSignin", input)
             .then((response) => {
                 sendToken(response.data)
                 if (response.data) {

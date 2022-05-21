@@ -14,7 +14,7 @@ const AddEmployee = () => {
     }
 
     const handleOnClick = async () => {
-        await axios.post("https://employee-management-system-backend-omega.vercel.app/adminEmployeeSignup", input)
+        await axios.post("https://employee-management-system-backend-omega.vercel.app/app/users/adminEmployeeSignup", input)
             .then((res) => {
                 console.log(res.data)
             })

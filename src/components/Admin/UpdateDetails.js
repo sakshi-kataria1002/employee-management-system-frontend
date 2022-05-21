@@ -32,7 +32,7 @@ const UpdateDetails = () => {
     const handleClose = () => setOpen(false);
 
     const handleUpdate = async () => {
-        await axios.put(`https://employee-management-system-backend-omega.vercel.app/editEmployee/${params.id}`, input)
+        await axios.put(`https://employee-management-system-backend-omega.vercel.app/app/users/editEmployee/${params.id}`, input)
             //.then(response => console.log(response.data))
             .then(() => {
                 handleOpen();
